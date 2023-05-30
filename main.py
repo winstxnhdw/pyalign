@@ -20,4 +20,4 @@ def align():
     length_of_columns = str_len(input_matrix.T).max(axis=1)
     formatter = vectorize(lambda cell, length: f'{cell:{length}}')
     formatted_matrix = formatter(input_matrix, length_of_columns)
-    Element('output-field').write('\n'.join('|'.join(row) for row in formatted_matrix))
+    Element('output-field').write('\n'.join(align_character.join(row) for row in formatted_matrix))
