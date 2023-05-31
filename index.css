@@ -6,8 +6,7 @@ py-config {
   display: none;
 }
 
-#text-field,
-#output-field {
+#text-field, #output-field {
   width: 49%;
   height: 800px;
   padding: 5px;
