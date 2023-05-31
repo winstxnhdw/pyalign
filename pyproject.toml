@@ -13,7 +13,6 @@ disable = [
 ]
 
 [tool.pyright]
-include = ['*']
 stubPath = 'typings'
 reportUnknownVariableType = false
 reportUnknownMemberType = false
