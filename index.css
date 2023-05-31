@@ -1,0 +1,57 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+py-config {
+  display: none;
+}
+
+#text-field,
+#output-field {
+  width: 49%;
+  height: 800px;
+  padding: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#single-char-field {
+  width: 20px;
+  font-family: Arial, sans-serif;
+  margin-left: 10px;
+}
+
+#button {
+  width: 90px;
+  height: 40px;
+  background-color: #4caf50;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+  outline: none;
+}
+
+#button:hover {
+  background-color: #45a049;
+}
+
+#button-and-input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#align-field-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#textarea-container {
+  display: flex;
+  justify-content: space-between;
+}
