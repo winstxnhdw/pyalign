@@ -7,7 +7,7 @@ def align():
     """
     Summary
     -------
-    aligns the text in the input field by the character specified in the single-char-field
+    aligns the text in the input field by the character specified in the `single-char-field`
     """
     align_character = Element('single-char-field').value
     input_text = Element('text-field').value
