@@ -12,6 +12,9 @@ py-config {
   padding: 5px;
   margin-bottom: 10px;
   box-sizing: border-box;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: scroll;
 }
 
 #single-char-field {
