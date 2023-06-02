@@ -1,6 +1,6 @@
 # pyalign
 
-Aligns your multiline strings to a common character with PyScript.
+Aligns your multiline strings to a common character with [PyScript](https://pyscript.net/).
 
 ```text
 | Action  | Command |                    | Action      | Command         |
