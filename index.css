@@ -16,6 +16,7 @@ py-splashscreen, py-config {
   white-space: pre;
   overflow-wrap: normal;
   overflow-x: scroll;
+  resize: vertical;
 }
 
 #single-char-field {
