@@ -2,6 +2,14 @@
 
 Aligns your multiline strings to a common character with PyScript.
 
+```text
+| Action  | Command |                    | Action      | Command         |
+| ------- | ------- |                    | -------     | -------         |
+| Hello | `World` |             ---->    | Hello       | `World`         |
+| This | `is an example` |               | This        | `is an example` |
+| of terrible | `alignment` |            | of terrible | `alignment`     |
+```
+
 ## Development
 
 Install the following dependenci(es).
