@@ -1,3 +1,4 @@
+from js import alert  # pylint: disable=import-error  # type: ignore
 from numpy import array, vectorize
 from numpy.core.defchararray import str_len
 from pyscript import Element  # pylint: disable=import-error  # type: ignore
@@ -13,7 +14,7 @@ def align():
     input_text = Element('text-field').value
 
     if not align_character or not input_text:
-        print('Please fill in all fields!')
+        alert('Please fill in all fields!')
         return
 
     input_matrix = array([line.split(align_character) for line in input_text.split('\n')])

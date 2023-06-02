@@ -1,0 +1,3 @@
+# pylint: disable-all
+
+def alert(message: str) -> None: ...
