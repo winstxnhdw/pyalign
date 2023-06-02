@@ -17,7 +17,7 @@ def align():
         return
 
     input_matrix = array([line.split(align_character) for line in input_text.split('\n')])
-    length_of_columns = str_len(input_matrix.T).max(axis=1)
+    min_column_width = str_len(input_matrix.T).max(axis=1)
     formatter = vectorize(lambda cell, length: f'{cell:{length}}')
-    formatted_matrix = formatter(input_matrix, length_of_columns)
+    formatted_matrix = formatter(input_matrix, min_column_width)
     Element('output-field').write('\n'.join(align_character.join(row) for row in formatted_matrix))
