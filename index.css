@@ -2,11 +2,13 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-py-splashscreen, py-config {
+py-splashscreen,
+py-config {
   display: none;
 }
 
-#text-field, #output-field {
+#text-field,
+#output-field {
   width: 49%;
   height: 65vh;
   padding: 5px;
