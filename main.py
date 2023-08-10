@@ -1,10 +1,36 @@
-from js import alert  # pylint: disable=import-error  # type: ignore
+from js import alert
 from numpy import array, vectorize
 from numpy.core.defchararray import str_len
-from pyscript import Element  # pylint: disable=import-error  # type: ignore
+from pyscript import Element
 
 
-def align():
+def align(align_character: str, input_text: str) -> str:
+    """
+    Summary
+    -------
+    aligns a text given a character to align by
+
+    Parameters
+    ----------
+    align_character (str) : the character to align the text by
+    input_text (str) : the text to align
+
+    Returns
+    -------
+    aligned_text (str) : the aligned text
+    """
+    input_text = input_text.strip()
+    align_character = align_character.strip()
+
+    input_matrix = array([line.split(align_character) for line in input_text.split('\n')])
+    min_column_width = str_len(input_matrix.T).max(axis=1)
+    formatter = vectorize(lambda cell, length: f'{cell:{length}}')
+    formatted_matrix = formatter(input_matrix, min_column_width)
+
+    return '\n'.join(align_character.join(row) for row in formatted_matrix)
+
+
+def submit():
     """
     Summary
     -------
@@ -17,8 +43,4 @@ def align():
         alert('Please fill in all fields!')
         return
 
-    input_matrix = array([line.split(align_character) for line in input_text.split('\n')])
-    min_column_width = str_len(input_matrix.T).max(axis=1)
-    formatter = vectorize(lambda cell, length: f'{cell:{length}}')
-    formatted_matrix = formatter(input_matrix, min_column_width)
-    Element('output-field').write('\n'.join(align_character.join(row) for row in formatted_matrix))
+    Element('output-field').write(align(align_character, input_text))
