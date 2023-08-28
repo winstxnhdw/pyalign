@@ -1,3 +1,3 @@
-# pylint: disable-all
+# pylint: skip-file
 
 def alert(message: str) -> None: ...
