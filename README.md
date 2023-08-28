@@ -1,6 +1,10 @@
 # pyalign
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/26ab67b9-6305-4776-829c-977042ec9d96/deploy-status)](https://app.netlify.com/sites/pyalign/deploys)
+[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/PyCQA/pylint)
+[![main.yml](https://github.com/winstxnhdw/pyalign/actions/workflows/main.yml/badge.svg)](https://github.com/winstxnhdw/pyalign/actions/workflows/main.yml)
+[![formatter.yml](https://github.com/winstxnhdw/pyalign/actions/workflows/formatter.yml/badge.svg)](https://github.com/winstxnhdw/pyalign/actions/workflows/formatter.yml)
+[![dependabot.yml](https://github.com/winstxnhdw/pyalign/actions/workflows/dependabot.yml/badge.svg)](https://github.com/winstxnhdw/pyalign/actions/workflows/dependabot.yml)
 
 Aligns your multiline strings to a common character with [PyScript](https://pyscript.net/).
 
@@ -17,7 +21,7 @@ Aligns your multiline strings to a common character with [PyScript](https://pysc
 Install the following dependenci(es).
 
 ```bash
-pip install numpy
+poetry install
 ```
 
 Run the development server.
