@@ -1,7 +1,5 @@
 [tool.pylint.format]
-good-names = [
-    'x', 'y', 'z', 'id', 'ok'
-]
+good-names = ['x', 'y', 'z', 'id', 'ok']
 
 [tool.pylint.messages_control]
 disable = [
@@ -10,7 +8,8 @@ disable = [
     'useless-import-alias',
     'line-too-long',
     'too-many-arguments',
-    'import-error'
+    'import-error',
+    'used-before-assignment',
 ]
 
 [tool.pyright]
@@ -20,3 +19,23 @@ reportUnknownMemberType = false
 reportUntypedFunctionDecorator = false
 reportMissingTypeStubs = false
 reportMissingModuleSource = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.poetry]
+name = "pyalign"
+version = "0.1.0"
+description = ""
+authors = ["winstxnhdw <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+pyright = "^1.1.324"
+pylint = "^2.17.5"
+pytest = "^7.4.0"
+isort = "^5.12.0"
+numpy = "^1.25.2"
