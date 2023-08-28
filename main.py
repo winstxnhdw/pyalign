@@ -1,7 +1,11 @@
-from js import alert
+from typing import TYPE_CHECKING
+
 from numpy import array, vectorize
 from numpy.core.defchararray import str_len
-from pyscript import Element
+
+if TYPE_CHECKING:
+    from js import alert
+    from pyscript import Element
 
 
 def align(align_character: str, input_text: str) -> str:
