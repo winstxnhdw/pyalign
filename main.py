@@ -8,6 +8,24 @@ if TYPE_CHECKING:
     from pyscript import Element
 
 
+def pad_cell(cell: str, length: int) -> str:
+    """
+    Summary
+    -------
+    applies padding to a cell
+
+    Parameters
+    ----------
+    cell (str) : the cell to pad
+    length (int) : the length to pad the cell to
+
+    Returns
+    -------
+    padded_cell (str) : the padded cell
+    """
+    return f'{cell:{length}}'
+
+
 def align(align_character: str, input_text: str) -> str:
     """
     Summary
@@ -27,9 +45,9 @@ def align(align_character: str, input_text: str) -> str:
     align_character = align_character.strip()
 
     input_matrix = array([line.split(align_character) for line in input_text.split('\n')])
-    min_column_width = str_len(input_matrix.T).max(axis=1)
-    formatter = vectorize(lambda cell, length: f'{cell:{length}}')
-    formatted_matrix = formatter(input_matrix, min_column_width)
+    min_column_width: int = str_len(input_matrix.T).max(axis=1)
+    formatter = vectorize(pad_cell)
+    formatted_matrix: list[list[str]] = formatter(input_matrix, min_column_width)
 
     return '\n'.join(align_character.join(row) for row in formatted_matrix)
 
