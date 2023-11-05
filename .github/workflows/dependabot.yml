@@ -5,6 +5,8 @@ on: pull_request
 jobs:
   build:
     uses: winstxnhdw/actions/.github/workflows/python.yml@main
+    with:
+      python-version: 3.11
 
   auto-merge:
     needs: build
