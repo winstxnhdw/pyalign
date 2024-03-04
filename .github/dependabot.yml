@@ -1,21 +1,21 @@
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: github-actions
+    directory: /
     schedule:
-      interval: "weekly"
+      interval: weekly
       time: "18:00"
-      timezone: "Asia/Singapore"
+      timezone: Asia/Singapore
     groups:
        dependencies:
           patterns: ["*"]
 
-  - package-ecosystem: "pip"
-    directory: "/"
+  - package-ecosystem: pip
+    directory: /
     schedule:
-      interval: "daily"
+      interval: daily
       time: "18:00"
-      timezone: "Asia/Singapore"
+      timezone: Asia/Singapore
     groups:
        dependencies:
           patterns: ["*"]
