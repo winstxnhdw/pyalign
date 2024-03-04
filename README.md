@@ -6,6 +6,9 @@
 [![formatter.yml](https://github.com/winstxnhdw/pyalign/actions/workflows/formatter.yml/badge.svg)](https://github.com/winstxnhdw/pyalign/actions/workflows/formatter.yml)
 [![dependabot.yml](https://github.com/winstxnhdw/pyalign/actions/workflows/dependabot.yml/badge.svg)](https://github.com/winstxnhdw/pyalign/actions/workflows/dependabot.yml)
 
+> [!TIP]\
+> This project was made before I found out about [table-magic](https://stevecat.net/table-magic/). Use that instead.
+
 Aligns your multiline strings to a common character with [PyScript](https://pyscript.net/).
 
 ```text
