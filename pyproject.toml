@@ -36,6 +36,6 @@ python = "^3.11"
 [tool.poetry.group.dev.dependencies]
 pyright = "^1.1.365"
 pylint = "^3.2.2"
-pytest = "^8.2.1"
+pytest = "^8.2.2"
 isort = "^5.13.2"
 numpy = "^1.26.4"
