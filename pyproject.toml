@@ -7,6 +7,13 @@ reportUntypedFunctionDecorator = false
 reportMissingTypeStubs = false
 reportMissingModuleSource = false
 
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["D", "TCH004", "ANN001"]
+
 [tool.pytest.ini_options]
 pythonpath = ["."]
 
@@ -25,3 +32,4 @@ pyright = "^1.1.385"
 pytest = "^8.3.3"
 numpy = "^2.1.2"
 ruff = "^0.7.2"
+nodejs-wheel-binaries = "^22.11.0"

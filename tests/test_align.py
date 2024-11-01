@@ -1,4 +1,4 @@
-# pylint: disable=missing-function-docstring
+# ruff: noqa
 
 from main import align
 
@@ -16,4 +16,4 @@ def test_align():
 | This        | `is an example` |
 | of terrible | `alignment`     |"""
 
-    assert align('|', poorly_aligned_string) == expected_output
+    assert align("|", poorly_aligned_string) == expected_output

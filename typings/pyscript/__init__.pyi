@@ -1,9 +1,8 @@
-# pylint: skip-file
+# ruff: noqa: N801 N802
 
-class Element:
+class HTMLElement:
+    value: str
 
-    def __init__(self, id: str) -> None:
-        self.value: str
-
-
-    def write(self, text: str) -> None: ...
+class document:
+    @staticmethod
+    def getElementById(name: str) -> HTMLElement: ...

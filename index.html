@@ -5,20 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>pyalign</title>
     <link rel="stylesheet" href="index.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@pyscript/core/dist/core.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@pyscript/core/dist/core.js"></script>
   </head>
   <body>
-    <py-config> packages = ["numpy"] </py-config>
-    <py-script src="main.py"></py-script>
-
     <div id="textarea-container">
-      <textarea id="text-field">
-| Action  | Command |
+      <textarea id="text-field">| Action  | Command |
 | ------- | ------- |
 | Hello | `World` |
 | This | `is an example` |
-| of terrible | `alignment` |
-      </textarea>
+| of terrible | `alignment` |</textarea>
       <textarea id="output-field" disabled></textarea>
     </div>
     <div id="button-and-input">
@@ -26,7 +22,8 @@
         Character to align on:
         <input id="single-char-field" type="text" maxlength="1" value="|" />
       </div>
-      <button id="button" py-click="submit()">Align</button>
+      <button id="button" py-click="submit">Align</button>
     </div>
+    <script type="py" src="main.py" config="pyscript.json"></script>
   </body>
 </html>

@@ -1,11 +1,15 @@
-from typing import TYPE_CHECKING
+from typing import Any
 
 from numpy import array, vectorize
-from numpy.core.defchararray import str_len
+from numpy.char import str_len
 
-if TYPE_CHECKING:
+try:
     from js import alert
-    from pyscript import Element
+    from pyscript import document
+
+except ImportError:
+    alert = print
+    document: Any
 
 
 def pad_cell(cell: str, length: int) -> str:
@@ -23,7 +27,7 @@ def pad_cell(cell: str, length: int) -> str:
     -------
     padded_cell (str) : the padded cell
     """
-    return f'{cell:{length}}'
+    return f"{cell:{length}}"
 
 
 def align(align_character: str, input_text: str) -> str:
@@ -44,25 +48,25 @@ def align(align_character: str, input_text: str) -> str:
     input_text = input_text.strip()
     align_character = align_character.strip()
 
-    input_matrix = array([line.split(align_character) for line in input_text.split('\n')])
+    input_matrix = array([line.split(align_character) for line in input_text.split("\n")])
     min_column_width: int = str_len(input_matrix.T).max(axis=1)
     formatter = vectorize(pad_cell)
     formatted_matrix: list[list[str]] = formatter(input_matrix, min_column_width)
 
-    return '\n'.join(align_character.join(row) for row in formatted_matrix)
+    return "\n".join(align_character.join(row) for row in formatted_matrix)
 
 
-def submit():
+def submit(_) -> None:
     """
     Summary
     -------
     aligns the text in the input field by the character specified in the `single-char-field`
     """
-    align_character = Element('single-char-field').value
-    input_text = Element('text-field').value
+    align_character = document.getElementById("single-char-field").value
+    input_text = document.getElementById("text-field").value
 
     if not align_character or not input_text:
-        alert('Please fill in all fields!')
+        alert("Please fill in all fields!")
         return
 
-    Element('output-field').write(align(align_character, input_text))
+    document.getElementById("output-field").value = align(align_character, input_text)
