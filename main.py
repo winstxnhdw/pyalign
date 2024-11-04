@@ -1,7 +1,7 @@
 from typing import Any
 
 from numpy import array, vectorize
-from numpy.char import str_len
+from numpy.core.defchararray import str_len
 
 try:
     from js import alert
