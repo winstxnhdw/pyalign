@@ -28,7 +28,7 @@ readme = "README.md"
 python = "^3.12"
 
 [tool.poetry.group.dev.dependencies]
-pyright = "^1.1.390"
+pyright = "^1.1.391"
 pytest = "^8.3.4"
 numpy = "2.2.0"
 ruff = "^0.8.3"
