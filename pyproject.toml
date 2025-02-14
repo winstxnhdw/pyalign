@@ -31,6 +31,6 @@ python = "^3.12"
 [tool.poetry.group.dev.dependencies]
 pyright = "^1.1.394"
 pytest = "^8.3.4"
-numpy = "2.2.2"
+numpy = "2.2.3"
 ruff = "^0.9.6"
 nodejs-wheel-binaries = "^22.14.0"
