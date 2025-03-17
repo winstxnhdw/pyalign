@@ -24,7 +24,7 @@ Aligns your multiline strings to a common character with [PyScript](https://pysc
 Install the following dependenci(es).
 
 ```bash
-poetry install
+uv sync
 ```
 
 Run the development server.

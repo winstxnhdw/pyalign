@@ -1,3 +1,21 @@
+[project]
+name = "pyalign"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = ["nodejs-wheel-binaries>=22.14.0", "numpy>=2.2.4", "pyright>=1.1.396", "pytest>=8.3.5", "ruff>=0.11.0"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["D", "TC004", "ANN001"]
+
 [tool.pyright]
 stubPath = "typings"
 typeCheckingMode = "strict"
@@ -7,30 +25,5 @@ reportUntypedFunctionDecorator = false
 reportMissingTypeStubs = false
 reportMissingModuleSource = false
 
-[tool.ruff]
-line-length = 120
-
-[tool.ruff.lint]
-select = ["ALL"]
-ignore = ["D", "TCH004", "ANN001"]
-
 [tool.pytest.ini_options]
 pythonpath = ["."]
-
-[tool.poetry]
-name = "pyalign"
-version = "0.1.0"
-description = ""
-authors = ["winstxnhdw <you@example.com>"]
-readme = "README.md"
-package-mode = false
-
-[tool.poetry.dependencies]
-python = "^3.12"
-
-[tool.poetry.group.dev.dependencies]
-pyright = "^1.1.396"
-pytest = "^8.3.5"
-numpy = "2.2.3"
-ruff = "^0.10.0"
-nodejs-wheel-binaries = "^22.14.0"

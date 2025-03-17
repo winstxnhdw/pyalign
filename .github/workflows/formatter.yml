@@ -13,5 +13,3 @@ permissions:
 jobs:
   format:
     uses: winstxnhdw/actions/.github/workflows/format-python.yml@main
-    with:
-      cache-dependency-glob: poetry.lock

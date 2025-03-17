@@ -6,9 +6,9 @@ on:
     paths:
       - .github/workflows/main.yml
       - pyproject.toml
-      - poetry.lock
+      - uv.lock
       - '**.py'
 
 jobs:
   test:
-    uses: winstxnhdw/actions/.github/workflows/python.yml@main
+    uses: winstxnhdw/actions/.github/workflows/uv.yml@main
