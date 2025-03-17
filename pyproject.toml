@@ -14,7 +14,7 @@ line-length = 120
 
 [tool.ruff.lint]
 select = ["ALL"]
-ignore = ["D", "TC004", "ANN001"]
+ignore = ["D", "TC004", "ANN001", "INP001"]
 
 [tool.pyright]
 stubPath = "typings"
