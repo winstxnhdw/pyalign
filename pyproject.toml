@@ -7,7 +7,7 @@ requires-python = ">=3.14.3"
 dependencies = []
 
 [dependency-groups]
-dev = ["nodejs-wheel-binaries>=24.13.1", "numpy>=2.4.2", "pyright>=1.1.408", "pytest>=9.0.2", "ruff>=0.15.0"]
+dev = ["nodejs-wheel-binaries>=24.13.1", "numpy>=2.4.2", "pyright>=1.1.408", "pytest>=9.0.2", "ruff>=0.15.1"]
 
 [tool.ruff]
 line-length = 120
